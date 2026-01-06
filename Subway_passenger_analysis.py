@@ -12,6 +12,8 @@ metro_recent = metro_all[metro_all['사용월'] == 202410]
 # 불필요한 '작업일자' 칼럼 제거
 metro_recent = metro_recent.drop(columns=['작업일자'])
 
+print(metro_recent.head)
+
 # object 타입 빼고 저장
 numeric_col = metro_recent.select_dtypes(exclude='object').columns
 
